@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/IIterable and Iterator Interface/IIterable and Iterator Interface.iml" filepath="$PROJECT_DIR$/IIterable and Iterator Interface/IIterable and Iterator Interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Java-Collections-Framework.iml" filepath="$PROJECT_DIR$/.idea/Java-Collections-Framework.iml" />
+    </modules>
+  </component>
+</project>
