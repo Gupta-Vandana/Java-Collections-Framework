@@ -44,7 +44,7 @@ public class GenericList<T> implements Iterable<T> {
 //            if (this.hasNext())
 //                return genericList.items[index++];
 //            else
-               // return null;
+//                return null;
 
             return genericList.items[index++];
         }
