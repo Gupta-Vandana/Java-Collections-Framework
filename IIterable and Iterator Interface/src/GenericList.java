@@ -6,11 +6,13 @@ public class GenericList<T> implements Iterable<T> {
 
     public GenericList() {
         size = 0;
-        items = (T[]) new Object[100];
+        items = (T[]) new Object[5];
     }
+
     public void add(T item) {
         items[size++] = item;
     }
+
     public T getItemAtIndex(int idx) {
         return items[idx];
     }
@@ -18,18 +20,33 @@ public class GenericList<T> implements Iterable<T> {
 
     @Override
     public Iterator<T> iterator() {
-        return null;
+        return new GenericListIterator(this);
     }
-    private class GenericListIterator implements Iterator{
 
-        @Override
-        public boolean hasNext() {
-            return false;
+    private class GenericListIterator implements Iterator<T> {
+
+        private GenericList<T> genericList;
+        private int index = 0;
+
+        private GenericListIterator(GenericList<T> genericList) {
+            this.genericList = genericList;
         }
 
         @Override
-        public Object next() {
-            return null;
+        public boolean hasNext() {
+            System.out.println("HasNext called");
+            return index < genericList.items.length;
+        }
+
+        @Override
+        public T next() {
+            System.out.println("Next called");
+//            if (this.hasNext())
+//                return genericList.items[index++];
+//            else
+               // return null;
+
+            return genericList.items[index++];
         }
     }
 }
